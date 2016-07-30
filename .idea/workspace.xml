@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43be0276-ff36-48d3-804d-371cdef3da71" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSVtoINSERT.py" />
-    </list>
+    <list default="true" id="43be0276-ff36-48d3-804d-371cdef3da71" name="Default" comment="" />
     <ignored path="https---github.com-Potato91-CsvDB.git.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
