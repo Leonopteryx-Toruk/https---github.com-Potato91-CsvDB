@@ -8,7 +8,10 @@ def keys_to_string(keys, nomeTabella):
         if(not idTabella == keys[i].lower()):
             string += keys[i] + ", "
         i = i + 1
-    string += keys[i]
+    if(not idTabella == keys[i].lower()):
+        string += keys[i]
+    else:
+        string = string[:len(string)-2]
     return string
 
 def values(row, nomeTabella):
@@ -32,6 +35,8 @@ def values(row, nomeTabella):
             string += "\'" + row[keys[i]] + "\'"
         else:
             string += row[keys[i]]
+    else:
+        string = string[:len(string) - 2]
     return string
 
 
@@ -52,5 +57,5 @@ def readCsv(fileName, tableName):
     return sql_insert
 
 if __name__ == "__main__":
-    res = readCsv("sanzione.csv", "SANZIONE")
+    res = readCsv("varco.csv", "VARCO")
     print res
