@@ -1,4 +1,5 @@
 import csv
+import sys
 
 def keys_to_string(keys, nomeTabella):
     string = ""
@@ -41,9 +42,10 @@ def values(row, nomeTabella):
 
 
 def readCsv(fileName, tableName):
+    csv.field_size_limit(sys.maxint)
     sql_insert = ""
     rows = []
-    with open(fileName) as csv_file:
+    with open(fileName, 'rb') as csv_file:
         reader = csv.DictReader(csv_file)
         j = 0
         for row in reader:
@@ -57,5 +59,6 @@ def readCsv(fileName, tableName):
     return sql_insert
 
 if __name__ == "__main__":
-    res = readCsv("varco.csv", "VARCO")
-    print res
+    res = readCsv("sanzione.csv", "SANZIONE")
+    f = open("query.txt", "wb")
+    f.write(res)
